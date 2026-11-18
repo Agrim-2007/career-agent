@@ -1,0 +1,22 @@
+services:
+  - type: web
+    runtime: docker
+    name: career-copilot-agent
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    plan: free
+    region: singapore
+    healthCheckPath: /health
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: ACCESS_CODE
+        sync: false
+      - key: OPENAI_CHAT_MODEL
+        value: gpt-4o-mini
+      - key: OPENAI_CRITIC_MODEL
+        value: gpt-4o
+      - key: OPENAI_JUDGE_MODEL
+        value: gpt-4o
+      - key: FORWARDED_ALLOW_IPS
+        value: "*"

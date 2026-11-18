@@ -1,0 +1,16 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+.env
+chroma_db/
+history.db*
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+evals/results/
+.DS_Store
+
+# Frontend build artifacts / deps -- never commit these
+frontend/node_modules/
+frontend/dist/
